@@ -21,6 +21,10 @@ body{
     -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
+    background-image: url('../img/body-bg.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
 }
 
 a {
