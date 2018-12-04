@@ -1,8 +1,6 @@
 header.header
     .container
 
-        a(href="/").header__logo
-
         nav.header__navigation
 
             a#mobile-menu.header__trigger
@@ -11,6 +9,6 @@ header.header
                 span
 
             //    вызов миксина в переменную 'list' с указаним элементов массива(названий страниц)
-            - var list = ['главнаЯ', 'КЕЙСЫ', 'СИСТЕМЫ', 'УСЛУГИ', 'ТЕМЫ', 'МЫ', 'ПАРТНЕРЫ', 'КОНТАКТЫ'];
+            - var list = ['HOME', 'OVER ONS', 'ASSORTIMENT', 'GALLERIJ', 'AGENDA', 'CONTACT'];
             - var link = ['/', '#', '#', '#', '#', '#', '#', '#'];
                 +top-menu(list, link)

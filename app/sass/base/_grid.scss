@@ -5,24 +5,20 @@
     margin-right: auto;
     margin-left: auto;
     position: relative;
+
+    @include breakpoint(max-width 1200px) {
+        width: 1200px;
+    }
+
+    @include breakpoint(max-width 992px) {
+        width: 990px;
+    }
+
+    @include breakpoint(max-width 770px) {
+        width: 760px;
+    }
 }
 
 .container {
     @extend %clearfix;
-}
-@media (min-width: 768px) {
-    .container {
-        width: 766px;
-    }
-}
-@media (min-width: 992px) {
-    .container {
-        width: 990px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .container {
-        width: 1170px;
-    }
 }
