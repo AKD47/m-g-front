@@ -4,6 +4,27 @@
   width: 100%;
   padding-top: 30px;
   padding-bottom: 30px;
+
+  .container {
+
+    .row {
+      margin: 0;
+    }
+  }
+
+  &--about {
+    padding-bottom: 0;
+
+    @include breakpoint(max-width 900px) {
+      height: calc(100vh - 167px);
+      height: -webkit-calc(100vh - 167px);
+      height: -moz-calc(100vh - 167px);
+    }
+
+    @include breakpoint(max-width 700px) {
+      height: 100%;
+    }
+  }
   
   &__title {
     position: relative;
@@ -130,6 +151,11 @@
     &--about {
       margin-top: 50px;
       margin-bottom: 100px;
+
+      @include breakpoint(max-width 700px) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
     }
   }
 
@@ -181,6 +207,42 @@
       float: left;
       width: 100%;
       height: 100%;
+    }
+  }
+
+  &__team {
+    position: absolute;
+    top: -46px;
+    right: 0;
+    width: 50%;
+    height: calc(100% + 44px);
+    height: -webkit-calc(100% + 44px);
+    height: -moz-calc(100% + 44px);
+    padding-left: 50px;
+    @include border-box;
+
+    @include breakpoint(max-width 1024px) {
+      top: 0;
+      height: 100%;
+    }
+
+    @include breakpoint(max-width 700px ) {
+      position: relative;
+      float: left;
+      width: 100%;
+      top: inherit;
+      right: inherit;
+      padding: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @include breakpoint(max-width 1024px) {
+        object-fit: contain;
+      }
     }
   }
 }
