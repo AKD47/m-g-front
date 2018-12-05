@@ -18,6 +18,7 @@
     @include breakpoint(max-width 600px) {
       padding: 0 15px;
       @include border-box;
+      margin-top: 30px;
     }
 
     &:before {
@@ -46,6 +47,8 @@
       background-repeat: no-repeat;
       -webkit-background-size: contain;
       background-size: contain;
+
+
     }
   }
 
@@ -70,6 +73,11 @@
     float: left;
     width: 100%;
 
+    @include breakpoint(max-width 660px) {
+      padding: 16px 20px;
+      @include border-box;
+    }
+
     &:before {
       display: block;
       position: absolute;
@@ -82,6 +90,11 @@
       background-repeat: no-repeat;
       -webkit-background-size: contain;
       background-size: contain;
+
+      @include breakpoint(max-width 600px) {
+        top: 0;
+        right: 0;
+      }
     }
 
     &:after {
@@ -96,6 +109,11 @@
       background-repeat: no-repeat;
       -webkit-background-size: contain;
       background-size: contain;
+
+      @include breakpoint(max-width 600px) {
+        left: 0;
+        bottom: 0;
+      }
     }
 
     p {
@@ -146,6 +164,11 @@
     height: calc(100% - 70px);
     padding-left: 50px;
     @include border-box;
+
+    @include breakpoint(max-width 660px) {
+      padding: 0;
+      height: 170px;
+    }
 
     video {
       display: block;

@@ -4,6 +4,7 @@
     position: relative;
     float: left;
     width: 100%;
+    z-index: 1;
   }
 
   &__nav {
@@ -19,10 +20,27 @@
     padding-top: 15px;
     list-style: none;
 
+    @include breakpoint(max-width 900px) {
+      display: none;
+      position: absolute;
+      right: 0;
+      width: 250px;
+      background-color: #c42328;
+    }
+
+    @include breakpoint(max-width 660px) {
+      width: 100%;
+    }
+
     > li {
       position: relative;
       float: left;
       margin: 0 30px;
+
+      @include breakpoint(max-width 900px) {
+        width: 100%;
+        margin: 0;
+      }
 
       a {
         position: relative;
@@ -55,6 +73,66 @@
           width: 80%;
           @include transition(0.4s);
         }
+      }
+    }
+  }
+
+  &__trigger {
+    display: none;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    right: 12px;
+    background-color: transparent;
+    z-index: 15;
+    cursor: pointer;
+
+    @include breakpoint(max-width 900px) {
+      display: block;
+    }
+
+    span {
+      display: block;
+      height: 2px;
+      width: 18px;
+      background-color: #fff;
+      position: absolute;
+      left: 50%;
+      margin-left: -9px;
+      top: 50%;
+      margin-top: -1px;
+    }
+
+    span:first-of-type {
+      transition: all 0.2s;
+      margin-top: -6px;
+      content: '';
+    }
+    span:last-of-type {
+      transition: all 0.2s;
+      margin-top: 4px;
+      content: '';
+    }
+  }
+
+  &__trigger.js-trigger-active {
+
+    span:nth-of-type(2) {
+      display: none;
+    }
+
+    span {
+      background-color: #fff;
+
+      &:first-of-type {
+        transform: rotate(135deg);
+        margin-top: 0;
+      }
+
+      &:last-of-type {
+        transform: rotate(-134deg);
+        margin-top: 0;
       }
     }
   }

@@ -5,6 +5,14 @@
   width: 100%;
   height: 325px;
 
+  @include breakpoint(max-width 900px) {
+    height: 167px;
+  }
+
+  @include breakpoint(max-width 660px) {
+    height: 65px;
+  }
+
   &__img {
     position: absolute;
     width: 100%;
