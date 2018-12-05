@@ -1,5 +1,7 @@
 $MPR: 'MyriadProRegular';
 $AR: 'ArialRegular';
+$A: 'AcmeRegular';
+$VCS: 'VtksColoredSoul3';
 
 @font-face {
   font-family: 'MyriadProRegular';
@@ -17,5 +19,27 @@ $AR: 'ArialRegular';
   src: url('../fonts/Arial/ArialRegular.eot') format('embedded-opentype'),
   url('../fonts/Arial/ArialRegular.woff') format('woff'),
   url('../fonts/Arial/ArialRegular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'AcmeRegular';
+  src: url('../fonts/Acme/AcmeFontRegular.eot') format('embedded-opentype'),
+  url('../fonts/Acme/AcmeFontRegular.otf') format('otf'),
+  url('../fonts/Acme/AcmeFontRegular.woff2') format('woff2'),
+  url('../fonts/Acme/AcmeFontRegular.woff') format('woff'),
+  url('../fonts/Acme/AcmeFontRegular.ttf') format('truetype'),
+  url('../fonts/Acme/AcmeFontRegular.svg') format('svg');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'VtksColoredSoul3';
+  src: url('../fonts/VtksColoredSoul3/VtksColoredSoul3.eot') format('embedded-opentype'),
+  url('../fonts/VtksColoredSoul3/VtksColoredSoul3.otf') format('otf'),
+  url('../fonts/VtksColoredSoul3/VtksColoredSoul3.woff2') format('woff2'),
+  url('../fonts/VtksColoredSoul3/VtksColoredSoul3.woff') format('woff'),
+  url('../fonts/VtksColoredSoul3/VtksColoredSoul3.ttf') format('truetype'),
+  url('../fonts/VtksColoredSoul3/VtksColoredSoul3.svg') format('svg');
   font-weight: normal;
 }
