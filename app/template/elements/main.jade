@@ -28,3 +28,11 @@ section.main
                         img(src='img/trmark-2.png')
 
             .col-lg-7.col-md-7.col-sm-12
+                .main__video
+                    video(controls='controls', poster='img/video-poster.png')
+                        source(src='', type='video/ogg; codecs="theora, vorbis"')
+                        source(src='', type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"')
+                        source(src='video/duel.webm', type='video/webm; codecs="vp8, vorbis"')
+                        |    Тег video не поддерживается вашим браузером.
+                        a(href='#') Download video
+
