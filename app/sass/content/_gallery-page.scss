@@ -5,6 +5,23 @@
   padding-top: 50px;
   padding-bottom: 100px;
 
+  @include breakpoint(max-width 900px) {
+    height: calc(100vh - 167px);
+    height: -webkit-calc(100vh - 167px);
+    height: -moz-calc(100vh - 167px);
+  }
+
+  @include breakpoint(max-width 700px) {
+    height: 100%;
+  }
+
+  .container {
+
+    .row {
+      margin: 0;
+    }
+  }
+
   &__wrapper {
     position: relative;
     float: left;
@@ -19,10 +36,23 @@
     width: -moz-calc(33% - 30px);
     height: 300px;
     margin: 15px 15px;
+    margin-bottom: 15px;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0px 0px 4px 0px transparent;
     @include transition(0.4s);
+
+    @include breakpoint(max-width 700px) {
+      width: 300px;
+      margin-right: 0;
+      margin-left: calc(50% - (300px/2));
+    }
+
+    @include breakpoint(max-width 320px) {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+    }
 
     &--img {
       position: relative;
